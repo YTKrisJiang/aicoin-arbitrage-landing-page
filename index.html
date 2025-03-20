@@ -17,7 +17,7 @@
             font-family: 'Inter', sans-serif;
             letter-spacing: 0.01em;
             line-height: 1.6;
-            background-color: #000000; /* 更深的背景色 */
+            background-color: #000000; 
             color: #ffffff;
             position: relative;
             z-index: 1;
@@ -40,12 +40,12 @@
             transition: all 0.3s ease, transform 0.5s ease;
             transform-style: preserve-3d;
             perspective: 1000px;
-            background-color: rgba(26, 32, 44, 0.6); /* 与bg-dark-100保持一致 */
+            background-color: rgba(26, 32, 44, 0.6); 
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border-radius: 12px;
             overflow: hidden;
-            border: none !important; /* 移除边框 */
+            border: none !important; 
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3),
                         inset 0 0 0 1px rgba(255, 255, 255, 0.07);
         }
@@ -74,15 +74,15 @@
             border: none !important; /* 确保悬停时也没有边框 */
         }
         
-        /* 修复太空背景在整个页面的显示 */
+        
         .space-background {
-            position: fixed;  /* 保持固定定位 */
+            position: fixed;  
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            z-index: -10;  /* 降低z-index确保在所有内容之下 */
+            z-index: -10; 
             background-color: #000000;
             background-image: 
                 radial-gradient(circle at 50% 100%, rgba(30, 41, 59, 0.4) 0%, transparent 70%),
@@ -95,10 +95,10 @@
         .content-wrapper {
             position: relative;
             z-index: 1;
-            background-color: transparent !important; /* 移除任何可能的背景色 */
+            background-color: transparent !important; 
         }
         
-        /* 确保所有区块都是透明的 */
+        
         #features, 
         #how-it-works, 
         #testimonials, 
@@ -110,7 +110,7 @@
             z-index: 1;
         }
         
-        /* 修复可能的背景覆盖问题 */
+        
         .bg-black,
         .bg-dark-200,
         .bg-opacity-30,
@@ -119,17 +119,17 @@
             background-image: none !important;
         }
         
-        /* 为部分区块添加半透明背景，增强可读性 */
+        
         .section-overlay {
             background-color: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(5px);
-            border-radius: 0; /* 移除圆角 */
-            border: none; /* 移除边框 */
-            margin: 0; /* 移除外边距 */
-            padding: 2rem 0; /* 添加内边距 */
+            border-radius: 0; 
+            border: none;
+            margin: 0; 
+            padding: 2rem 0; 
         }
         
-        /* 确保页脚不会被覆盖 */
+        
         footer {
             position: relative;
             z-index: 1;
@@ -137,7 +137,7 @@
             backdrop-filter: blur(10px);
         }
         
-        /* 分散的光束效果 */
+        
         .light-beam {
             position: absolute;
             top: 0;
@@ -152,7 +152,7 @@
             opacity: 0.7;
         }
         
-        /* 额外的光束 */
+       
         .light-beam::before,
         .light-beam::after {
             content: "";
@@ -178,7 +178,7 @@
             opacity: 0.3;
         }
         
-        /* 星星效果增强 */
+      
         .star {
             position: absolute;
             background-color: #ffffff;
@@ -190,21 +190,21 @@
         }
         
         @keyframes twinkle {
-            0%, 100% { opacity: 0.05; } /* 降低最低不透明度 */
+            0%, 100% { opacity: 0.05; }
             50% { opacity: var(--opacity); }
         }
         
-        /* 移除鼠标跟随粒子效果的样式 */
+        
         .interactive-star {
-            display: none; /* 隐藏互动星星 */
+            display: none;
         }
         
-        /* 减弱鼠标指针周围的发光效果 */
+        
         .cursor-glow {
-            display: none; /* 完全移除鼠标发光效果 */
+            display: none; 
         }
         
-        /* 星云效果 */
+        
         .nebula {
             position: absolute;
             width: 100%;
@@ -216,18 +216,18 @@
             opacity: 0.5;
         }
         
-        /* 居中的英雄区域 */
+        
         .hero-centered {
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
-            padding-top: 80px;  /* 减少顶部间距 */
-            padding-bottom: 40px; /* 减少底部间距 */
+            padding-top: 80px;  
+            padding-bottom: 40px; 
             position: relative;
             z-index: 10;
         }
         
-        /* 适应左右布局的英雄区域 */
+       
         @media (min-width: 1024px) {
             .hero-centered {
                 text-align: left;
@@ -292,7 +292,7 @@
             margin-top: 0.5rem;
         }
         
-        /* 按钮样式 */
+        
         .hero-button {
             display: inline-flex;
             align-items: center;
@@ -315,14 +315,14 @@
         }
         
         
-        /* 卡片背景色修复 */
+      
         .bg-dark-100 {
-            background-color: rgba(26, 32, 44, 0.6) !important; /* 深色背景带透明度 */
-            backdrop-filter: blur(15px); /* 增强模糊效果 */
+            background-color: rgba(26, 32, 44, 0.6) !important; 
+            backdrop-filter: blur(15px); 
             -webkit-backdrop-filter: blur(15px);
-            border: none !important; /* 移除边框 */
+            border: none !important; 
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3),
-                        inset 0 0 0 1px rgba(255, 255, 255, 0.07); /* 保留内阴影增强磨砂感 */
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.07); 
         }
         
         /* 添加颗粒纹理 */
@@ -340,12 +340,12 @@
             border-radius: 12px;
         }
         
-        /* 图标背景色修复 */
+        
         .bg-primary\/20 {
-            background-color: rgba(64, 128, 255, 0.2) !important; /* 主色调带透明度 */
+            background-color: rgba(64, 128, 255, 0.2) !important; 
         }
         
-        /* 确保图标容器有正确的样式 */
+        
         .w-12.h-12.rounded-md.bg-primary\/20,
         .flex.items-center.justify-center.h-12.w-12.rounded-md.bg-primary\/20 {
             background-color: rgba(64, 128, 255, 0.2) !important;
@@ -353,14 +353,14 @@
             box-shadow: 0 0 10px rgba(64, 128, 255, 0.1);
         }
         
-        /* 定义主色调文本颜色 */
+        
         .text-primary {
             color: #4080ff !important;
         }
         
         
         
-        /* 透明卡片样式 */
+        
         .transparent-card {
             background: rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(3px);
@@ -369,7 +369,7 @@
             overflow: hidden;
         }
         
-        /* 为特定内容添加卡片样式，而不是整个区块 */
+        
         .content-card {
             background-color: rgba(17, 24, 39, 0.6);
             backdrop-filter: blur(5px);
@@ -379,7 +379,7 @@
             margin-bottom: 1.5rem;
         }
         
-        /* 确保区块之间没有可见的分隔 */
+        
         #features, 
         #how-it-works, 
         #testimonials, 
@@ -393,44 +393,44 @@
             box-shadow: none !important;
         }
         
-        /* 移除所有可能的分隔线 */
+        
         hr, .border-t, .border-b, .border-gray-800, .border-gray-700 {
             display: none !important;
         }
         
-        /* 调整区块间距 */
+        
         .py-12, .py-16 {
             padding-top: 6rem;
             padding-bottom: 6rem;
         }
         
-        /* 确保页脚没有边框 */
+        
         footer {
             border-top: none !important;
         }
         
-        /* 滚动卡片样式 - 增加卡片间距 */
+        
         .scrolling-cards {
             width: 100%;
-            overflow: visible; /* 允许卡片放大时超出容器 */
+            overflow: visible;
             position: relative;
-            padding: 20px 0; /* 上下内边距 */
+            padding: 20px 0; 
         }
         
         .scrolling-cards-inner {
             display: flex;
             animation: scrollCards 30s linear infinite;
             width: max-content;
-            padding: 10px 0; /* 为放大效果提供额外空间 */
+            padding: 10px 0; 
         }
         
         .scrolling-card {
             flex: 0 0 auto;
             width: 280px;
-            background-color: rgba(26, 32, 44, 0.6); /* 与bg-dark-100保持一致 */
+            background-color: rgba(26, 32, 44, 0.6);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border: none !important; /* 移除边框 */
+            border: none !important; 
             border-radius: 12px;
             padding: 16px;
             margin-right: 24px;
@@ -467,19 +467,19 @@
             transform: scale(1.05);
             box-shadow: 0 15px 30px -10px rgba(64, 128, 255, 0.4),
                         inset 0 0 0 1px rgba(255, 255, 255, 0.15);
-            border: none !important; /* 确保悬停时也没有边框 */
+            border: none !important; 
         }
         
         .scrolling-card:hover::before {
             opacity: 0.7;
         }
         
-        /* 减弱卡片光泽效果 */
+        
         .card-shine {
-            opacity: 0.08 !important; /* 大幅减弱光泽效果 */
+            opacity: 0.08 !important;
         }
         
-        /* 创建一个外部容器来控制溢出 */
+        
         .scrolling-cards-container {
             overflow: hidden;
             position: relative;
@@ -494,28 +494,28 @@
             }
         }
         
-        /* 当鼠标悬停在容器上时暂停滚动 */
+        
         .scrolling-cards:hover .scrolling-cards-inner {
             animation-play-state: paused;
         }
     
-    /* 添加图片堆叠样式 */
+    
     .image-stack {
     position: relative;
     width: 100%;
-    height: auto; /* 保持自适应高度 */
-    min-height: 400px; /* 保持最小高度 */
+    height: auto; 
+    min-height: 400px; 
     perspective: 1000px;
     display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    margin: 0 auto; /* 居中对齐 */
-    margin-left: 2rem; /* 增加与左侧内容的间距 */
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    margin-left: 2rem; 
     }
     
     .image-container {
         position: absolute;
-        width: 80%; /* 保持宽度 */
+        width: 80%; 
         transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         border-radius: 12px;
@@ -523,14 +523,14 @@
         background-color: transparent;
     }
     
-    /* 创建对角线交错效果 */
+    
     .first-image {
-        transform: translate(-25%, -25%); /* 左上角偏移 */
+        transform: translate(-25%, -25%); 
         z-index: 2;
     }
     
     .second-image {
-        transform: translate(25%, 25%); /* 右下角偏移 */
+        transform: translate(25%, 25%); 
         z-index: 1;
     }
     
@@ -639,14 +639,14 @@
             }
         }
         
-        /* 调整英雄区域的布局比例 - 给图片更多空间 */
+        /* 调整英雄区域的布局比例  */
         @media (min-width: 1024px) {
             .hero-centered {
-                width: 50% !important; /* 进一步减小文字部分的宽度 */
+                width: 50% !important; 
             }
             
             .lg\:w-1\/2:last-child {
-                width: 50% !important; /* 进一步增加图片部分的宽度 */
+                width: 50% !important; 
             }
         }
     </style>
@@ -676,15 +676,15 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="lg:flex lg:items-center lg:justify-between">
                     <div class="hero-centered lg:w-1/2 lg:text-left">
-                        <p class="hero-subtitle mb-4">让套利更高效</p>
-                        <h1 class="hero-title text-5xl md:text-6xl lg:text-7xl">AiCoin 套利工具</h1>
+                        <p class="hero-subtitle mb-6" style="color: #acadae; letter-spacing: 0.05em;">让套利更高效</p>
+                        <h1 class="hero-title text-5xl md:text-6xl lg:text-7xl mb-6" style="letter-spacing: 0.03em;">AiCoin 套利工具</h1>
                        
-                        <p class="hero-description lg:pr-10" style="color: #acadae;">
-                            一款专为套利新手和专业交易者打造的工具，实现自动化套利，轻松赚取稳定收益。
+                        <p class="hero-description lg:pr-10 mb-8" style="color: #acadae; letter-spacing: 0.02em;">
+                            AiCoin套利工具是一款专为套利新手和专业交易者打造的智能交易工具，通过AI驱动的自动化策略，实现跨平台资金费率和价差套利，轻松赚取稳定收益。
                         </p>
                         
-                        <div class="mt-8">
-                            <a href="#download" class="hero-button">
+                        <div class="mt-10">
+                            <a href="#download" class="hero-button" style="letter-spacing: 0.05em;">
                                 <i class="fas fa-download mr-2"></i><span data-i18n="download-btn">立即下载体验</span>
                             </a>
                         </div>
@@ -1497,7 +1497,7 @@
                 'meta-description': 'AiCoin套利策略工具是一款专为套利新手和专业交易者打造的套利工具，拥有自动化套利，半自动套利开仓、平仓，跨平台专业套利等多项功能',
                 'hero-title': 'AiCoin 套利工具',
                 'hero-subtitle': '让套利更高效',
-                'hero-description': '一款专为套利新手和专业交易者打造的工具，实现自动化套利，轻松赚取稳定收益。',
+                'hero-description': 'AiCoin套利工具是一款专为套利新手和专业交易者打造的智能交易工具，通过AI驱动的自动化策略，实现跨平台资金费率和价差套利，轻松赚取稳定收益。',
                 'download-btn': '立即下载体验',
                 'strategy-title': '海量策略选择',
                 'strategy-subtitle': '多种精选策略，超高年化收益',
@@ -1548,7 +1548,7 @@
                 'meta-description': 'AiCoin套利策略工具是一款專為套利新手和專業交易者打造的套利工具，擁有自動化套利，半自動套利開倉、平倉，跨平台專業套利等多項功能',
                 'hero-title': 'AiCoin 套利工具',
                 'hero-subtitle': '讓套利更高效',
-                'hero-description': '一款專為套利新手和專業交易者打造的工具，實現自動化套利，輕鬆賺取穩定收益。',
+                'hero-description': 'AiCoin套利工具是一款專為套利新手和專業交易者打造的智能交易工具，通過AI驅動的自動化策略，實現跨平台資金費率和價差套利，輕鬆賺取穩定收益。',
                 'download-btn': '立即下載體驗',
                 'strategy-title': '海量策略選擇',
                 'strategy-subtitle': '多種精選策略，超高年化收益',
@@ -1599,7 +1599,7 @@
                 'meta-description': 'AiCoin Arbitrage Strategy Tool is designed for both beginners and professional traders, featuring automated arbitrage, semi-automatic position opening/closing, and cross-platform professional arbitrage capabilities',
                 'hero-title': 'AiCoin Arbitrage Tool',
                 'hero-subtitle': 'Making Arbitrage More Efficient',
-                'hero-description': 'A tool designed for both arbitrage beginners and professional traders, enabling automated arbitrage to easily earn stable returns.',
+                'hero-description': 'AiCoin Arbitrage Tool is an intelligent trading tool designed for both arbitrage beginners and professional traders, achieving cross-platform funding rate and price difference arbitrage through AI-driven automated strategies, easily earning stable profits.',
                 'download-btn': 'Download Now',
                 'strategy-title': 'Abundant Strategy Options',
                 'strategy-subtitle': 'Multiple selected strategies with high annualized returns',
@@ -1956,20 +1956,5 @@
             }
         });
     </script>
-
-    <script>
-        // 在页面加载完成后添加这段代码
-        document.addEventListener('DOMContentLoaded', function() {
-            // 设置默认语言为简体中文
-            if (!localStorage.getItem('preferredLanguage')) {
-                localStorage.setItem('preferredLanguage', 'zh-CN');
-            }
-            
-            // 应用当前语言
-            const currentLang = localStorage.getItem('preferredLanguage') || 'zh-CN';
-            switchLanguage(currentLang);
-        });
-    </script>
-
 </body>
 </html>

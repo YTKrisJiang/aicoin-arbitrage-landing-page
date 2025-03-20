@@ -11,18 +11,6 @@ body {
     background-clip: text;
 }
 
-/* 输入框聚焦时的渐变边框 */
-.gradient-border:focus {
-    outline: none;
-    border: 2px solid transparent;
-    border-radius: 0.375rem;
-    background-image: linear-gradient(#0F172A, #0F172A), 
-                      linear-gradient(45deg, #6366F1, #10B981);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
-}
-
 /* 悬停缩放效果 */
 .hover-scale {
     transition: transform 0.3s ease;
@@ -40,117 +28,8 @@ body {
     transform: translateY(-5px);
 }
 
-/* 图表容器 */
-.chart-container {
-    height: 200px;
-    position: relative;
-}
-.chart-bar {
-    position: absolute;
-    bottom: 0;
-    width: 20px;
-    border-radius: 4px 4px 0 0;
-    background: linear-gradient(180deg, #6366F1 0%, #818CF8 100%);
-    transition: height 1s ease;
-}
-
 /* 动画效果 */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fadeIn {
-    animation: fadeIn 0.8s ease forwards;
-}
-
-/* 响应式调整 */
-@media (max-width: 640px) {
-    .chart-container {
-        height: 150px;
-    }
-    .chart-bar {
-        width: 15px;
-    }
-}
-
-/* 进一步调整图片堆叠样式 */
-.image-stack {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 250px !important;
-    perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-left: 2rem;
-    max-width: 250px !important;
-    overflow: visible !important;
-    z-index: 1 !important;
-}
-
-.image-container {
-    position: absolute;
-    width: 60% !important;
-    max-width: 150px !important;
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: transparent;
-    z-index: 2 !important;
-}
-
-/* 确保图片不会超出容器 - 使用更高优先级选择器 */
-.image-container img.rounded-lg,
-.image-container img.w-full,
-.image-container img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    max-height: 150px !important;
-    object-fit: contain !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
-
-/* 调整图片位置，使其不会重叠太多 */
-.first-image {
-    transform: translate(-10%, -10%) !important;
-    z-index: 3 !important;
-}
-
-.second-image {
-    transform: translate(10%, 10%) !important;
-    z-index: 2 !important;
-}
-
-/* 修复悬停效果，确保不会破坏布局 */
-.first-image:hover {
-    transform: translate(-10%, -10%) scale(1.05) !important;
-    z-index: 4 !important;
-}
-
-.second-image:hover {
-    transform: translate(10%, 10%) scale(1.05) !important;
-    z-index: 4 !important;
-}
-
-/* 添加一个新的类来覆盖所有样式 */
-.aicoin-image {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    max-height: 180px !important;
-    object-fit: contain !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
 }
